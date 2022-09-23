@@ -1,0 +1,38 @@
+{
+  "name": "json-dts-gen",
+  "version": "0.0.1",
+  "main": "index.js",
+  "repository": "https://github.com/mkusaka/json-dts-gen.git",
+  "author": "mkusaka <hinoshita1992@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "ts-morph": "^16.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^18.7.18",
+    "ts-node": "^10.9.1",
+    "typescript": "^4.8.3"
+  },
+  "peerDependencies": {
+    "typescript": "*"
+  },
+  "bin": {
+    "json-dts-gen": "./bin/gen"
+  },
+  "scripts": {
+    "test": "curl https://raw.githubusercontent.com/OAI/OpenAPI-Specification/master/examples/v3.0/petstore.json -o petstore.json && yarn build && bin/gen petstore.json",
+    "build": "rm -rf dist && tsc",
+    "prepublishOnly": "yarn build && git push origin HEAD && git push --tags"
+  },
+  "files": [
+    "bin/gen",
+    "dist",
+    "cli.ts"
+  ],
+  "keywords": [
+    "cli",
+    "type definition",
+    "generator",
+    "json"
+  ]
+}
