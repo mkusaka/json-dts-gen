@@ -6,7 +6,7 @@
   "author": "mkusaka <hinoshita1992@gmail.com>",
   "license": "MIT",
   "dependencies": {
-    "ts-morph": "^16.0.0"
+    "ts-morph": "^18.0.0"
   },
   "devDependencies": {
     "@types/node": "^18.15.3",
