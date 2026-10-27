@@ -13,7 +13,7 @@ importers:
         version: 28.0.0
     devDependencies:
       '@types/node':
-        specifier: ^24.0.0
+        specifier: 24.13.2
         version: 24.13.2
       ts-node:
         specifier: ^10.9.1
